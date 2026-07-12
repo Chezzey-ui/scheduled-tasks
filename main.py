@@ -1,16 +1,17 @@
-# To run and test the code you need to update 4 places:
-# 1. Change MY_EMAIL/MY_PASSWORD to your own details.
-# 2. Go to your email provider and make it allow less secure apps.
-# 3. Update the SMTP ADDRESS to match your email provider.
-# 4. Update birthdays.csv to contain today's month and day.
-# See the solution video in the 100 Days of Python Course for explainations.
-
-
 from datetime import datetime
 import pandas
-import random
-import smtplib
-import os
+from twilio.rest import Client
+import requests
+
+MY_API_KEY = os.environ.get("MY_API_KEY")
+
+MY_PHONE = os.environ.get("MY_PHONE")
+MY_SEND_PHONE = os.environ.get("MY_SEND_PHONE")
+MY_ACCOUNT_SID = os.environ.get("MY_ACCOUNT_SID")
+MY_AUTH_TOKEN = os.environ.get("MY_AUTH_TOKEN")
+
+MY_LAT = os.environ.get("MY_LAT")
+MY_LONG = os.environ.get("MY_LONG")
 
 # import os and use it to get the Github repository secrets
 MY_EMAIL = os.environ.get("MY_EMAIL")
@@ -33,7 +34,7 @@ umbrella = any(num <700 for num in weather)
 if umbrella:
     message = client.messages.create(
         body="Bring an Umbrella!",
-        from_=f"whatsapp:{PHONE}",
-        to="whatsapp:+16476161716",
+        from_=f"whatsapp:{MY_SEND_PHONE}",
+        to="whatsapp:{MY_PHONE}",
     )
     print(message.status)
