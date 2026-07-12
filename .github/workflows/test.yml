@@ -26,7 +26,7 @@ jobs:
           MY_EMAIL: ${{ secrets.MY_EMAIL }}
           MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
           MY_API_KEY: ${{ secrets.MY_API_KEY }}
-          MY_PHONE: ${{ secrets.MY_API_KEY }}
+          MY_PHONE: ${{ secrets.MY_PHONE }}
           MY_SEND_PHONE: ${{ secrets.MY_SEND_PHONE }}
           MY_AUTH_TOKEN: ${{ secrets.MY_AUTH_TOKEN }}
           MY_ACCOUNT_SID: ${{ secrets.MY_ACCOUNT_SID }}
