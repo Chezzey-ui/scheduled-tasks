@@ -9,6 +9,7 @@ MY_PHONE = os.environ.get("MY_PHONE")
 MY_SEND_PHONE = os.environ.get("MY_SEND_PHONE")
 MY_ACCOUNT_SID = os.environ.get("MY_ACCOUNT_SID")
 MY_AUTH_TOKEN = os.environ.get("MY_AUTH_TOKEN")
+client = Client(MY_ACCOUNT_SID, MY_AUTH_TOKEN)
 
 MY_LAT = os.environ.get("MY_LAT")
 MY_LONG = os.environ.get("MY_LONG")
@@ -18,9 +19,9 @@ MY_EMAIL = os.environ.get("MY_EMAIL")
 MY_PASSWORD = os.environ.get("MY_PASSWORD")
 
 parameters = {
-    "lat" : LAT,
-    "lon": LONG,
-    "appid": API_KEY,
+    "lat" : MY_LAT,
+    "lon": MY_LONG,
+    "appid": MY_API_KEY,
     "cnt": 4
 }
 
