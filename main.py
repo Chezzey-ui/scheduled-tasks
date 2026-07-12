@@ -37,6 +37,6 @@ if umbrella:
     message = client.messages.create(
         body="Bring an Umbrella!",
         from_=f"whatsapp:{MY_SEND_PHONE}",
-        to="whatsapp:{MY_PHONE}",
+        to=f"whatsapp:{MY_PHONE}",
     )
     print(message.status)
