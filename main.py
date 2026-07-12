@@ -2,6 +2,7 @@ from datetime import datetime
 import pandas
 from twilio.rest import Client
 import requests
+import os
 
 MY_API_KEY = os.environ.get("MY_API_KEY")
 
