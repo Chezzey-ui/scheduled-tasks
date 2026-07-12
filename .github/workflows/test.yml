@@ -25,6 +25,13 @@ jobs:
         env:
           MY_EMAIL: ${{ secrets.MY_EMAIL }}
           MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
+          MY_API_KEY: ${{ secrets.MY_API_KEY }}
+          MY_PHONE: ${{ secrets.MY_API_KEY }}
+          MY_SEND_PHONE: ${{ secrets.MY_SEND_PHONE }}
+          MY_AUTH_TOKEN: ${{ secrets.MY_AUTH_TOKEN }}
+          MY_ACCOUNT_SID: ${{ secrets.MY_ACCOUNT_SID }}
+          MY_LAT: ${{ secrets.MY_LAT }}
+          MY_LONG: ${{ secrets.MY_LONG }}
         run: |
           if [ -z "$MY_EMAIL" ]; then
             echo "MY_EMAIL secret is not set!"
@@ -60,13 +67,6 @@ jobs:
             echo "requirements.txt found"
           else
             echo "requirements.txt not found!"
-            exit 1
-          fi
-
-          if [ -f "birthdays.csv" ]; then
-            echo "birthdays.csv found"
-          else
-            echo "birthdays.csv not found!"
             exit 1
           fi
 
